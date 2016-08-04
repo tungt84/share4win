@@ -8,6 +8,7 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class HttpsForceFilter implements Filter{
@@ -21,8 +22,10 @@ public class HttpsForceFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		
-		if("http".equalsIgnoreCase(request.getScheme())){
+		HttpServletRequest servletRequest =(HttpServletRequest)request;
+		String schema;
+		schema =  servletRequest.getHeader("x-forwarded-proto");
+		if("http".equalsIgnoreCase(schema)){
 			HttpServletResponse servletResponse = (HttpServletResponse) response;
 			servletResponse.setStatus(HttpServletResponse.SC_MOVED_PERMANENTLY);
 			servletResponse.setHeader("Location", "https://"+server+("443".equals(port)?"":(":"+port)));
