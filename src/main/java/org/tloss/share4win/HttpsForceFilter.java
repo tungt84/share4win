@@ -1,5 +1,6 @@
 package org.tloss.share4win;
 
+import java.beans.PropertyVetoException;
 import java.io.IOException;
 
 import javax.servlet.Filter;
@@ -38,6 +39,11 @@ public class HttpsForceFilter implements Filter{
 	public void init(FilterConfig config) throws ServletException {
 		server =  config.getInitParameter("https-server");
 		port =  config.getInitParameter("https-port");
+		try {
+			DatasourceFactory.getDataSource();
+		} catch (PropertyVetoException e) {
+			throw new ServletException(e);
+		}
 	}
 	
 }
