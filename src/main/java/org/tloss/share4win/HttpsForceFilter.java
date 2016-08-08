@@ -69,6 +69,7 @@ public class HttpsForceFilter implements Filter {
 		}
 		if(!checkPermission(servletRequest, user)){
 			servletResponse.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return ;
 		}
 		PageInfo info = new PageInfo();
 		info.setTitle("Share4Win");
