@@ -3,6 +3,7 @@ package org.tloss.share4win;
 import java.beans.PropertyVetoException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.sql.DataSource;
@@ -15,12 +16,15 @@ public class DealService {
 			PreparedStatement pstmt = null;
 			try {
 				con = dataSource.getConnection();
-				con.setAutoCommit(false);
-				pstmt = con.prepareStatement("UPDATE COFFEES " + "SET PRICE = ? " + "WHERE COF_NAME = ?");
+				pstmt = con.prepareStatement("SELECT * FROM deal");
 				// pstmt.setFloat(1, price);
 				// pstmt.setString(2, cofName);
-				pstmt.executeUpdate();
-				con.commit();
+				ResultSet rs = pstmt.executeQuery();
+				while (rs.next()) {
+					String userid = rs.getString("title");
+					String username = rs.getString("content");
+				}
+				//pstmt.executeUpdate();
 
 			} finally {
 				try {
