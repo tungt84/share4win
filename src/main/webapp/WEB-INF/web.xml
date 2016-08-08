@@ -43,6 +43,14 @@
       <param-name>mail-from</param-name>
       <param-value>share4win2016@gmail.com</param-value>
     </init-param>
+    <init-param>
+      <param-name>authen-admin</param-name>
+      <param-value>tungt84@gmail.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>authen-protected-url</param-name>
+      <param-value>/user/.*</param-value>
+    </init-param>
   </filter>
   <filter-mapping>
     <filter-name>HttpsForceFilter</filter-name>
@@ -69,7 +77,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>RegisterServlet</servlet-name>
-    <url-pattern>/user/register</url-pattern>
+    <url-pattern>/public/register</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -79,7 +87,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>SetPasswordServlet</servlet-name>
-    <url-pattern>/user/setpassword</url-pattern>
+    <url-pattern>/public/setpassword</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -89,7 +97,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ActivePhoneServlet</servlet-name>
-    <url-pattern>/user/active-phone</url-pattern>
+    <url-pattern>/service/active/phone</url-pattern>
     <url-pattern>/user/active/phone</url-pattern>
   </servlet-mapping>
   <servlet>
@@ -110,7 +118,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
-    <url-pattern>/user/login</url-pattern>
-     <url-pattern>/service/user/login</url-pattern>
+    <url-pattern>/public/login</url-pattern>
+    <url-pattern>/service/user/login</url-pattern>
   </servlet-mapping>
 </web-app>

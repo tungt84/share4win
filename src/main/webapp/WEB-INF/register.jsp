@@ -26,7 +26,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ####################################################################################################### -->
 <div class="wrapper col5">
   <div id="container">
-    <form action="/user/register" method="post">
+    <form action="/public/register" method="post">
           <p>
             
             <input type="text" name="mail" id="mail" value="" size="22" />

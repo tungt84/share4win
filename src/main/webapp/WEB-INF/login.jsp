@@ -26,7 +26,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ####################################################################################################### -->
 <div class="wrapper col5">
   <div id="container">
-    <form action="/user/login" method="post">
+    <form action="/public/login" method="post">
           <p>
             <input type="text" name="email" id="email" value="" size="22" />
             <label for="email"><small>Gmail</small></label>
@@ -36,8 +36,8 @@ Licence URI: http://www.os-templates.com/template-terms
             <label for="password"><small>Mật khẩu</small></label>
           </p>
           <p>
-            Chưa có tài khoản? <a href="/user/register">Đăng ký ngay</a><br/>
-            <a  href="/user/forgot/password">Quên mật khẩu?</a>
+            Chưa có tài khoản? <a href="/public/register">Đăng ký ngay</a><br/>
+            <a  href="/public/forgot/password">Quên mật khẩu?</a>
           </p>
           <p>
             <input name="submit" type="submit" id="submit" value="Đăng nhập" />

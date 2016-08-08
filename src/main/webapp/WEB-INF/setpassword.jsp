@@ -26,7 +26,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- ####################################################################################################### -->
 <div class="wrapper col5">
   <div id="container">
-    <form action="/user/setpassword" method="post">
+    <form action="/public/setpassword" method="post">
           <p>
             <input type="password" name="password" id="password" value="" size="22" />
             <label for="password"><small>Mật khẩu</small></label>

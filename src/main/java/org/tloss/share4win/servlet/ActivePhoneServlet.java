@@ -74,7 +74,7 @@ public class ActivePhoneServlet extends HttpServlet {
 		// response.getWriter().append("Served at:
 		// ").append(request.getContextPath());
 		Utils.setPageTitle(request, "Kích hoạt số điện thoại");
-		if ("/user/active-phone".equals(request.getServletPath())) {
+		if ("/service/active/phone".equals(request.getServletPath())) {
 			SMS_VNHandle(request, response);
 		} else {
 			String mail = request.getParameter("email");
@@ -90,7 +90,7 @@ public class ActivePhoneServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Utils.setPageTitle(request, "Kích hoạt số điện thoại");
-		if ("/user/active-phone".equals(request.getServletPath())) {
+		if ("/service/active/phone".equals(request.getServletPath())) {
 			SMS_VNHandle(request, response);
 		} else {
 			// call by user

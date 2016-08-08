@@ -11,7 +11,7 @@
 	<li class="last"><a href="/user/logout">Đăng xuất</a></li>
 </c:when>
 <c:otherwise>
-	<li class="last"><a href="/user/login">Đăng nhập</a></li>
+	<li class="last"><a href="/public/login">Đăng nhập</a></li>
 </c:otherwise>
 </c:choose>
     </ul>
