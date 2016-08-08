@@ -13,7 +13,7 @@
     </init-param>
     <init-param>
       <param-name>exclude-url</param-name>
-      <param-value>/user/active-phone</param-value>
+      <param-value>/service/active/phone</param-value>
     </init-param>
     <init-param>
       <param-name>jdbc-driver</param-name>
